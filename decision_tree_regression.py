@@ -15,7 +15,7 @@ x = data_file.iloc[:,1:2].values
 y = data_file.iloc[:,2].values
 
 from sklearn.tree import DecisionTreeRegressor
-dtr = DecisionTreeRegressor()
+dtr = DecisionTreeRegressor(random_state = 0)
 dtr.fit(x,y)
 y_pred = dtr.predict(6.5)
 
