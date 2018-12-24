@@ -123,7 +123,10 @@ class southeros:
                 print(max_allies)
                 print(key)
                 print(f"Eliminate previous ruler {key}")
-                self.competing_kingdoms.remove(key)
+                try:
+                    self.competing_kingdoms.remove(key)
+                except:
+                    print(f"Already removed ruler {key}")
         #If more than one kingdom have maximum allies
         print(self.competing_kingdoms)
         if len(self.competing_kingdoms) > 1:
