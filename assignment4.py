@@ -19,8 +19,8 @@ ax.spines['top'].set_visible(False)
 ax.spines['right'].set_visible(False)
 
 plt.xlabel("Date")
-plt.ylabel("Price")
-plt.title("Stock Price in 2019")
+plt.ylabel("Stock Price")
+plt.title("Stock Price Analysis 2019")
 
 ax2 = ax.twinx()
 b = ax2.plot(list(df2["Date2"]),df2["Close"], alpha=0.5, label="TechM", color="Green")
@@ -35,7 +35,7 @@ ax2.yaxis.set_visible(False)
 # Combine legend
 h1, l1 = ax.get_legend_handles_labels()
 h2, l2 = ax2.get_legend_handles_labels()
-ax.legend(h1+h2, l1+l2, frameon = False)
+ax.legend(h1+h2, l1+l2,loc=3, frameon = False)
 
 fig.autofmt_xdate()
 
